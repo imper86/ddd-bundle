@@ -1,0 +1,31 @@
+{
+    "name": "imper86/ddd-bundle",
+    "description": "ddd symfony bundle",
+    "type": "symfony-bundle",
+    "autoload": {
+        "psr-4": {
+            "Imper86\\DddBundle\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "imper",
+            "email": "me@imper.info"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "imper86/ddd": "^2.0"
+    },
+    "require-dev": {
+        "imper86/vbump": "^1.0",
+        "phpstan/phpstan": "^1.4.6",
+        "symfony/config": "^6.0",
+        "symfony/dependency-injection": "^6.0",
+        "symfony/http-kernel": "^6.0",
+        "symfony/messenger": "^6.0"
+    },
+    "repositories": [
+        {"type": "composer", "url": "https://satis.imper.info/"}
+    ]
+}
