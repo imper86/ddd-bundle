@@ -11,3 +11,15 @@ services:
 
     Imper86\DDD\Domain\Bus\Query\QueryBus:
         class: Imper86\DddBundle\Bus\MessengerQueryBus
+
+    command.bus:
+        class: Symfony\Component\Messenger\MessageBus
+        tags: [messenger.bus]
+
+    event.bus:
+        class: Symfony\Component\Messenger\MessageBus
+        tags: [messenger.bus]
+
+    query.bus:
+        class: Symfony\Component\Messenger\MessageBus
+        tags: [messenger.bus]
