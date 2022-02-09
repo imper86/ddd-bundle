@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace Imper86\DddBundle\DependencyInjection;
 
+use Symfony\Bundle\FrameworkBundle\DependencyInjection\FrameworkExtension;
 use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
@@ -17,7 +18,7 @@ final class Imper86DddExtension extends Extension
         $loader->load('services.yaml');
 
         $container->prependExtensionConfig(
-            'FrameworkExtension',
+            FrameworkExtension::class,
             [
                 'framework' => [
                     'messenger' => [
