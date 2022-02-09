@@ -13,18 +13,3 @@ services:
         class: Imper86\DddBundle\Bus\MessengerQueryBus
         arguments:
             $queryBus: '@query.bus'
-
-    command.bus:
-        class: Symfony\Component\Messenger\MessageBus
-        autowire: true
-        tags: [messenger.bus]
-
-    event.bus:
-        class: Symfony\Component\Messenger\MessageBus
-        autowire: true
-        tags: [messenger.bus]
-
-    query.bus:
-        class: Symfony\Component\Messenger\MessageBus
-        autowire: true
-        tags: [messenger.bus]

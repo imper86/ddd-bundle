@@ -15,5 +15,23 @@ final class Imper86DddExtension extends Extension
     {
         $loader = new YamlFileLoader($container, new FileLocator(__DIR__ . '/../Resources/config'));
         $loader->load('services.yaml');
+
+        $container->prependExtensionConfig(
+            'FrameworkExtension',
+            [
+                'framework' => [
+                    'messenger' => [
+                        'default_bus' => 'command.bus',
+                        'buses' => [
+                            'command.bus' => null,
+                            'event.bus' => [
+                                'default_middleware' => 'allow_no_handlers',
+                            ],
+                            'query.bus' => null,
+                        ],
+                    ],
+                ],
+            ],
+        );
     }
 }
