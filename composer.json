@@ -25,8 +25,5 @@
     "require-dev": {
         "imper86/vbump": "^1.0",
         "phpstan/phpstan": "^1.4.6"
-    },
-    "repositories": [
-        {"type": "composer", "url": "https://satis.imper.info/"}
-    ]
+    }
 }
